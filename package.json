@@ -1,0 +1,51 @@
+{
+  "name": "node-rest-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.12",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.4.5"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "repositoryUrl": "git@github.com:michalzagrodzki/node-rest-api.git",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator"
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}
