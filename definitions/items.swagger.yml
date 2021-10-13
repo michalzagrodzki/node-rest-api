@@ -5,6 +5,10 @@ components:
       allOf:
         - type: object
           properties:
+            id:
+              type: number
+              description: Id of item.
+              example: "1"
             title:
               type: string
               description: Title of item.
