@@ -6,7 +6,7 @@ const definition = require("./docs.definition");
 const swaggerSpec = swaggerJsdoc({
   definition,
   apis: [
-    // "./definitions/list.swagger.yaml",
+    "./definitions/items.swagger.yml"
   ],
 });
 
