@@ -13,7 +13,6 @@ router.get('/:id', function(req, res, next) {
   const { id } = req.params;
   const intId = parseInt(id, 10);
   const itemById = list.filter(item => item.id === intId)[0];
-  console.log(itemById)
   if (itemById) {
     res.status(200).json(itemById);
   } else {
